@@ -1,0 +1,29 @@
+PLANER SESI — versão modernizada
+================================
+
+INSTALAÇÃO
+1. Copie a pasta DU_Planer_Sesi para o htdocs do XAMPP.
+2. Inicie Apache e MySQL.
+3. Em uma instalação nova, importe database/banco.sql pelo phpMyAdmin.
+4. Em um banco da versão anterior, faça backup e importe database/atualizar_banco.sql.
+5. Se necessário, ajuste DB_HOST, DB_USER, DB_PASS, DB_NAME e DB_PORT como variáveis de ambiente ou em config/conexao.php.
+6. Abra http://localhost/DU_Planer_Sesi/ no navegador.
+
+CONFIGURAÇÃO DE E-MAIL
+O sistema utiliza a função mail() do PHP. Configure o servidor de e-mail do PHP e as variáveis MAIL_USER, MAIL_PASS e MAIL_FROM quando o ambiente exigir. Se o envio falhar, a inscrição continua salva e o banco registra que a confirmação não foi enviada.
+
+BANCO DE DADOS
+O esquema usa InnoDB, chaves estrangeiras, índices únicos para CPF, e-mail, inscrição por aluno/modalidade e placar por modalidade. As consultas de entrada usam prepared statements. A reserva de vagas é transacional para impedir inscrições acima da capacidade.
+
+SEGURANÇA E FUNCIONAMENTO
+- Formulários de alteração protegidos por token CSRF.
+- Sessões regeneradas no login e cookies HttpOnly/SameSite.
+- Logout encerra sessão e cookie.
+- Status, placares, datas e capacidades validados no servidor.
+- Mensagens e conteúdo do banco escapados na saída.
+- Reinscrição após cancelamento reativa o registro existente.
+- Professores podem apagar qualquer inscrição; alunos podem apagar apenas as próprias (Painel e Minhas Inscrições).
+- Erros internos do banco não são exibidos publicamente.
+
+INTERFACE
+Nova identidade visual própria do Planer SESI, favicon, navegação responsiva, rodapé sem contatos fictícios, ícones vetoriais e layouts adaptados para celular, tablet e desktop.

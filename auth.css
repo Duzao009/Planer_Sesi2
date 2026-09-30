@@ -1,0 +1,190 @@
+/* ============================================
+   ESTILOS DE AUTENTICAÇÃO
+   ============================================ */
+
+.auth-wrapper {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #fff5f5, #ffffff);
+}
+
+.auth-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 50px rgba(204, 0, 0, 0.1);
+    width: 100%;
+    max-width: 520px;
+    overflow: hidden;
+    border: 1px solid rgba(204,0,0,0.1);
+}
+
+.auth-header {
+    background: linear-gradient(135deg, #990000, #CC0000);
+    padding: 35px;
+    text-align: center;
+    color: white;
+}
+
+.auth-header .logo-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.auth-header h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.auth-header p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.auth-tabs {
+    display: flex;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #777;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.auth-tab.active {
+    color: #CC0000;
+    border-bottom-color: #CC0000;
+    background: white;
+}
+
+.auth-tab:hover {
+    color: #CC0000;
+}
+
+.auth-body {
+    padding: 35px;
+}
+
+.auth-body h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #1A1A1A;
+}
+
+.auth-body .subtitle {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.auth-footer-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-footer-link a {
+    color: #CC0000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer-link a:hover {
+    text-decoration: underline;
+}
+
+.tipo-cadastro {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tipo-option {
+    flex: 1;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tipo-option:hover,
+.tipo-option.active {
+    border-color: #CC0000;
+    background: #fff5f5;
+}
+
+.tipo-option .tipo-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tipo-option .tipo-label {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1A1A1A;
+}
+
+.tipo-option .tipo-desc {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 3px;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.password-toggle {
+    position: relative;
+}
+
+.password-toggle .toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #777;
+}
